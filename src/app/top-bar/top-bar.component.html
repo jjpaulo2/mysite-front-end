@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand flex-column navbar-dark bg-dark text-light bd-navbar">
+    <span class="navbar-brand">João Paulo Carvalho</span>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row my-scroll">
+            <li class="nav-item" *ngFor='let item of routes'>
+                <a class="nav-link" routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

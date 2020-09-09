@@ -1,0 +1,28 @@
+* {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.page {
+    min-height: calc(100vh - 156px);
+    padding: 20px;
+}
+
+.card-experience {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+
+    .education-activities {
+        padding: 10px;
+    }
+
+    .input-group-prepend {
+        span {
+            width: 45px;
+
+            svg {
+                margin: auto;
+            }
+        }
+    }
+}

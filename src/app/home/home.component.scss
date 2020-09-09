@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.page {
+    min-height: calc(100vh - 156px);
+    padding: 20px;
+}
+
+.profile-photo {
+    display: block;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+    border: solid 8px rgba(255,255,255,.3);
+}
+
+.paragraph-home {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.social-links {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    a {
+        margin: 5px;
+        font-size: 20pt;
+        color: rgba(255,255,255,.5);
+    }
+
+    a:hover {
+        color: white;
+    }
+}

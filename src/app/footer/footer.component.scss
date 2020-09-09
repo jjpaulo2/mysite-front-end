@@ -1,0 +1,23 @@
+* {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.footer {
+    margin-top: -20px;
+    padding: 0 0 20px 0;
+    text-align: center;
+
+    span {
+        color: rgba(255, 255, 255, .8);
+
+        a {
+            color: white;
+        }
+    }
+}
+
+hr {
+    width: 80%;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
