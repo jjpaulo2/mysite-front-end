@@ -130,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mysite-front-end"
+    }
+  },
+  "defaultProject": "mysite-front-end",
+  "cli": {
+    "analytics": "33697adf-f516-4c47-951d-8b77915f7195"
+  }
 }
