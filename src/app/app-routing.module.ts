@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { EducationComponent } from './education/education.component';
-import { JobExperienceComponent } from './job-experience/job-experience.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { EducationComponent } from './components/education/education.component';
+import { JobExperienceComponent } from './components/job-experience/job-experience.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},

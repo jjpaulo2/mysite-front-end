@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from './home/home.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { JobExperienceComponent } from './job-experience/job-experience.component';
-import { EducationComponent } from './education/education.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { JobExperienceComponent } from './components/job-experience/job-experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
