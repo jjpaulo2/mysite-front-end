@@ -1,0 +1,38 @@
+.page {
+    min-height: calc(100vh - 156px);
+    padding: 20px;
+}
+
+.carousel {
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto 0 auto;
+
+    .carousel-inner {
+        height: 100%;
+    }
+    
+    .carousel-item {
+    
+        height: 100%;
+    
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .carousel-caption {
+            h5 {
+                width: max-content;
+                margin: 0 auto 8px auto;
+            }
+            
+            h5, p {
+                background-color: rgba(0,0,0,.5);
+                padding: 3px;
+                border-radius: 3px;
+            }
+        }
+    
+    }
+}

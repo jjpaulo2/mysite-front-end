@@ -1,3 +1,4 @@
+import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dados: GetApiDataService) { }
 
   ngOnInit(): void {
+    const token = this.dados.get_token();
+
+    const dados = this.dados.get_data(ENDPOINTS.Habilidades, token);
+    dados.subscribe(data => {
+      console.log(data);
+    });
   }
 
 }

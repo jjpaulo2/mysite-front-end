@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routes } from '../../app-routing.module'
+import { routes } from '../../app-routing.module';
 
 @Component({
   selector: 'app-top-bar',
@@ -10,10 +10,11 @@ export class TopBarComponent implements OnInit {
 
   routes = [
     {path: routes[1].path, name: 'Início'},
-    {path: routes[2].path, name: 'Educação'},
-    {path: routes[3].path, name: 'Experiência'},
-    {path: routes[4].path, name: 'Habilidades'},
-    {path: routes[5].path, name: 'Contato'}
+    {path: routes[2].path, name: 'Portfólio'},
+    {path: routes[3].path, name: 'Educação'},
+    {path: routes[4].path, name: 'Experiência'},
+    {path: routes[5].path, name: 'Habilidades'},
+    {path: routes[6].path, name: 'Contato'}
   ];
 
   constructor() { }

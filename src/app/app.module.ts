@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
@@ -11,6 +12,7 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 
 @NgModule({
@@ -22,11 +24,13 @@ import { FooterComponent } from './components/footer/footer.component';
     EducationComponent,
     SkillsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
