@@ -5,9 +5,6 @@
 export const environment = {
   production: false,
   api_url: 'https:/jjpaulo2.herokuapp.com',
-
-  user: 'johnkevid',
-  password: 'johndelas123'
 };
 
 /*
