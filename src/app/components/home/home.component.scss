@@ -6,9 +6,13 @@
 .profile-photo {
     display: block;
     width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     margin: 0 auto 0 auto;
-    border: solid 8px rgba(255,255,255,.3);
+    border: solid 8px rgba(255,255,255,.2);
+    background-color: rgba(255, 255, 255, .1);
 }
 
 .paragraph-home {

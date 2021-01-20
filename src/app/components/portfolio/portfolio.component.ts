@@ -1,3 +1,4 @@
+import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  portfolio: any;
+
+  constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
+
+    this.api.get_data_public(ENDPOINTS.Portfolio)
+        .subscribe((data) => {
+          // console.log(data);
+          this.portfolio = data;
+          this.portfolio.reverse();
+        });
   }
 
 }

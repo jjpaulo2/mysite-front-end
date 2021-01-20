@@ -4,14 +4,15 @@ import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 
 export enum ENDPOINTS {
-  Login = '/auth',
-  Sobre = '/sobre',
-  ParagrafosDescricao = '/paragrafos-descricao',
-  RedesSociais = '/redes-sociais',
-  Experiencia = '/experiencia',
-  Educacao = '/educacao',
-  ProjetosEducacao = '/projetos-educacao',
-  Habilidades = '/habilidades',
+  Login = '/auth/',
+  Sobre = '/sobre/',
+  ParagrafosDescricao = '/paragrafos-descricao/',
+  RedesSociais = '/redes-sociais/',
+  Experiencia = '/experiencia/',
+  Educacao = '/educacao/',
+  ProjetosEducacao = '/projetos-educacao/',
+  Habilidades = '/habilidades/',
+  Portfolio = '/portfolio/'
 }
 
 @Injectable({
@@ -50,6 +51,14 @@ export class GetApiDataService {
         Authentication: 'Token ' + token
       }
     });
+  }
+
+  public get_data_public(endpoint: ENDPOINTS, filter?: string, value?: string): Observable<object> {
+    let filterQuery = '';
+    if (filter) {
+      filterQuery = '?' + filter + '=' + value;
+    }
+    return this.http.get(this.get_url(endpoint) + filterQuery);
   }
 
 }

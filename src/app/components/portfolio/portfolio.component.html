@@ -2,32 +2,30 @@
 
     <div id="carouselExampleCaptions" class="carousel slide border border-dark" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li *ngFor="let work of portfolio; let i = index;" data-target="#carouselExampleCaptions" data-slide-to="{{ i }}" ></li>
         </ol>
         <div class="carousel-inner rounded">
-          <div class="carousel-item active">
-            <img src="https://i.pinimg.com/originals/3a/d8/25/3ad825fa000c3a6c7037e981472d4b1a.gif" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
+          <div *ngFor="let work of portfolio; let i = index;">
+
+            <div class="carousel-item slideItem active" *ngIf="i===0">
+              <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{ work.titulo }}</h5>
+                <p>{{ work.descricao }}</p>
+              </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://i.pinimg.com/originals/3a/d8/25/3ad825fa000c3a6c7037e981472d4b1a.gif" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div class="carousel-item slideItem" *ngIf="i>0">
+              <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{ work.titulo }}</h5>
+                <p>{{ work.descricao }}</p>
+              </div>
             </div>
+
           </div>
-          <div class="carousel-item">
-            <img src="https://i.pinimg.com/originals/3a/d8/25/3ad825fa000c3a6c7037e981472d4b1a.gif" class="d-block w-100 rounded" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
+          
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

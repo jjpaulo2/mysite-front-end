@@ -1,23 +1,13 @@
 <div class="page bg-dark text-light">
 
-    <img src="https://jjpaulo2.github.io/img/profile.jpg" class="profile-photo" alt="">
+    <img src="{{ sobre.foto || 'https://jjpaulo2.github.io/img/profile.jpg'}}" class="profile-photo" alt="">
     <br>
 
-    <p class='paragraph-home'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio iure sapiente a eos nulla maiores, voluptatem atque dolorem omnis dolorum! Ipsum vitae deleniti amet praesentium similique facilis, voluptate voluptatem!</p>
-    <p class='paragraph-home'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ea numquam doloremque corporis, modi beatae? Debitis perferendis illo eius quaerat. Officiis aspernatur id voluptates repellendus nemo tenetur dolores veritatis doloribus!</p>
+    <p *ngFor="let paragrafo of paragrafos" class='paragraph-home'>{{ paragrafo.paragrafo }}</p>
 
     <div class="social-links">
-        <a href="">
-            <i class="fab fa-telegram-plane"></i>
-        </a>
-        <a href="">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="">
-            <i class="fab fa-instagram"></i>
+        <a *ngFor="let rede of redesSociais" href="{{ rede.link }}" target="_blank">
+            <i class="{{ rede.icone }}"></i>
         </a>
     </div>
     

@@ -1,6 +1,6 @@
 <div class="page bg-dark text-light">
     
-    <div class="card bg-white text-dark card-experience">
+    <div class="card bg-white text-dark card-experience" *ngFor="let item of experience">
         <div class="card-header">
 
             <div class="input-group mb-2">
@@ -9,7 +9,7 @@
                         <i class="fas fa-briefcase"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control bg-white" value="Desenvolvedor Web Full Stack" readonly>
+                <input type="text" class="form-control bg-white" value="{{ item.cargo }}" readonly>
             </div>
 
             <div class="input-group mb-2">
@@ -18,7 +18,7 @@
                         <i class="fas fa-building"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control bg-white" value="ION Dev & Solar" readonly>
+                <input type="text" class="form-control bg-white" value="{{ item.empresa }}" readonly>
             </div>
 
             <div class="input-group">
@@ -27,12 +27,12 @@
                         <i class="fas fa-calendar-alt"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control bg-white" value="2018 - agora" readonly>
+                <input type="text" class="form-control bg-white" value="{{ item.inicio }} - {{ item.fim }}" readonly>
             </div>
 
         </div>
         <div class="card-body">
-            <p class='mb-0'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea molestias modi est reprehenderit explicabo illo nesciunt velit odit ducimus distinctio nisi officiis possimus eligendi quis, consequatur quas id molestiae esse.</p>
+            <p class='mb-0'>{{ item.descricao }}</p>
         </div>
     </div>
 

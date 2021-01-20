@@ -1,58 +1,16 @@
 <div class="page bg-dark text-light">
     
     <div class="container-skills mr-auto ml-auto">
-        <div class="row">
-            <div class="col-sm mb-3">
 
-                <div class="card text-dark text-center">
-                    <div class="card-header">
-                        PHP
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, ad eius! Iusto vitae deleniti modi adipisci exercitationem, sed aliquid illo temporibus expedita quibusdam obcaecati perferendis, rerum magnam, eaque qui et.</p>
-                    </div>
-                </div>
-
+        <div class="card text-dark text-center" *ngFor="let item of skills">
+            <div class="card-header">
+                {{ item.titulo }}
             </div>
-            <div class="col-sm mb-3">
-                
-                <div class="card text-dark text-center">
-                    <div class="card-header">
-                        Python
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, ad eius! Iusto vitae deleniti modi adipisci exercitationem, sed aliquid illo temporibus expedita quibusdam obcaecati perferendis, rerum magnam, eaque qui et.</p>
-                    </div>
-                </div>
-
+            <div class="card-body">
+                <p class="card-text">{{ item.descricao }}</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm mb-3">
 
-                <div class="card text-dark text-center">
-                    <div class="card-header">
-                        Javascript
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, ad eius! Iusto vitae deleniti modi adipisci exercitationem, sed aliquid illo temporibus expedita quibusdam obcaecati perferendis, rerum magnam, eaque qui et.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm mb-3">
-                
-                <div class="card text-dark text-center">
-                    <div class="card-header">
-                        PostgreSQL
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, ad eius! Iusto vitae deleniti modi adipisci exercitationem, sed aliquid illo temporibus expedita quibusdam obcaecati perferendis, rerum magnam, eaque qui et.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
 
 </div>

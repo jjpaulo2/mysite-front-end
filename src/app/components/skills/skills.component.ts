@@ -8,15 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor(private dados: GetApiDataService) { }
+  skills: any;
+
+  constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
-    const token = this.dados.get_token();
 
-    const dados = this.dados.get_data(ENDPOINTS.Habilidades, token);
-    dados.subscribe(data => {
-      console.log(data);
-    });
+    this.api.get_data_public(ENDPOINTS.Habilidades)
+        .subscribe(data => {
+          console.log(data);
+          this.skills = data;
+        });
   }
 
 }
