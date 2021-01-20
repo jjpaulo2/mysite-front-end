@@ -5,3 +5,16 @@
 * {
     font-family: 'Roboto Slab', sans-serif;
 }
+
+body {
+    background-color: #343a40 !important;
+}
+
+.page {
+    padding: 20px;
+}
+.loading {
+    margin: 20px auto 20px auto;
+    position: relative;
+    left: calc(50% - 15px);
+}

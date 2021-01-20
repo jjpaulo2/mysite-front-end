@@ -1,4 +1,4 @@
-<div class="page bg-dark text-light">
+<div class="page text-light">
     
     <div class="container-skills mr-auto ml-auto">
 
@@ -11,6 +11,12 @@
             </div>
         </div>
 
+    </div>
+
+    <div *ngIf="!skills">
+        <div class="spinner-border loading" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
     </div>
 
 </div>

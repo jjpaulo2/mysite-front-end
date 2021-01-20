@@ -1,8 +1,13 @@
-<div class="page bg-dark text-light">
+<div class="page text-light">
 
-    <img src="{{ sobre.foto || 'https://jjpaulo2.github.io/img/profile.jpg'}}" class="profile-photo" alt="">
+    <div class="profile-photo-div">
+        <img src="{{ sobre.foto }}" class="profile-photo" alt="">
+        <div class="spinner-border photo-loading" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
     <br>
-
+    
     <p *ngFor="let paragrafo of paragrafos" class='paragraph-home'>{{ paragrafo.paragrafo }}</p>
 
     <div class="social-links">

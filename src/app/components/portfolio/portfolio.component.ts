@@ -13,12 +13,18 @@ export class PortfolioComponent implements OnInit {
   constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
+    this.get_portfolio();
+  }
 
+  get_portfolio(): any {
     this.api.get_data_public(ENDPOINTS.Portfolio)
         .subscribe((data) => {
           // console.log(data);
           this.portfolio = data;
           this.portfolio.reverse();
+        }, (error) => {
+          console.log('Erro ao tentar obter portfolio. Tentando novamente...');
+          this.get_portfolio();
         });
   }
 

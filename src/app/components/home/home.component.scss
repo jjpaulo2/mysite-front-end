@@ -1,8 +1,3 @@
-.page {
-    min-height: calc(100vh - 156px);
-    padding: 20px;
-}
-
 .profile-photo {
     display: block;
     width: 200px;
@@ -13,7 +8,18 @@
     margin: 0 auto 0 auto;
     border: solid 8px rgba(255,255,255,.2);
     background-color: rgba(255, 255, 255, .1);
+    z-index: 10;
 }
+.profile-photo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-loading {
+    position: absolute;
+    left: calc(50% - 15px);
+}
+
 
 .paragraph-home {
     width: 80%;

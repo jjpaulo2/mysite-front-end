@@ -13,11 +13,17 @@ export class SkillsComponent implements OnInit {
   constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
+    this.get_skills();
+  }
 
+  get_skills(): any {
     this.api.get_data_public(ENDPOINTS.Habilidades)
         .subscribe(data => {
-          console.log(data);
+          // console.log(data);
           this.skills = data;
+        }, (error) => {
+          console.log('Erro ao tentar obter habilidades. Tentando novamente...');
+          this.get_skills();
         });
   }
 

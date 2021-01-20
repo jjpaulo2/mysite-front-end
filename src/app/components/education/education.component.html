@@ -1,4 +1,4 @@
-<div class="page bg-dark text-light">
+<div class="page text-light">
     
     <div class="card bg-white text-dark card-education" *ngFor="let item of education; let i = index;">
         <div class="card-header">
@@ -39,6 +39,12 @@
                 </li>
             </ul>
           
+        </div>
+    </div>
+
+    <div *ngIf="!education">
+        <div class="spinner-border loading" role="status">
+          <span class="sr-only">Loading...</span>
         </div>
     </div>
 

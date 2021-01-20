@@ -13,12 +13,18 @@ export class EducationComponent implements OnInit {
   constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
+    this.get_education();
+  }
 
+  get_education(): any {
     this.api.get_data_public(ENDPOINTS.Educacao)
         .subscribe((data) => {
           // console.log(data);
           this.education = data;
           this.education.reverse();
+        }, (error) => {
+          console.log('Erro ao tentar obter formações. Tentando novamente...');
+          this.get_education();
         });
   }
 

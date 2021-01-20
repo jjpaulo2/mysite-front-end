@@ -13,14 +13,19 @@ export class JobExperienceComponent implements OnInit {
   constructor(private api: GetApiDataService) { }
 
   ngOnInit(): void {
+    this.get_experience();
+  }
 
+  get_experience(): any {
     this.api.get_data_public(ENDPOINTS.Experiencia)
         .subscribe((data) => {
-          console.log(data);
+          // console.log(data);
           this.experience = data;
           this.experience.reverse();
+        }, (error) => {
+          console.log('Erro ao tentar obter experiências de trabalho. Tentando novamente...');
+          this.get_experience();
         });
-
   }
 
 }
