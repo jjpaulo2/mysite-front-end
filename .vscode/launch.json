@@ -4,7 +4,7 @@
             "type": "node-terminal",
             "name": "Run Angular App",
             "request": "launch",
-            "command": "npm run start",
+            "command": "ng serve --port 8000",
             "cwd": "${workspaceFolder}"
         }
     ]
