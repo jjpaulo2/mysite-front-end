@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url: 'https://jjpaulo2.herokuapp.com',
+  api_url: 'https://jjpaulo2-api.herokuapp.com',
 };
 
 /*
