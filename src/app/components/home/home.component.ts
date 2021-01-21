@@ -1,3 +1,4 @@
+import { ReloadService } from './../../services/reload/reload.service';
 import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,7 +13,9 @@ export class HomeComponent implements OnInit {
   paragrafos: any;
   redesSociais: any;
 
-  constructor(private api: GetApiDataService) { }
+  constructor(private api: GetApiDataService,
+              private reload: ReloadService
+              ) { }
 
   ngOnInit(): void {
     this.get_paragrafos();
@@ -26,8 +29,9 @@ export class HomeComponent implements OnInit {
           // console.log(data);
           this.sobre = data[0];
         }, (error) => {
-          console.log('Erro ao tentar obter informações. Tentando novamente...');
-          this.get_about();
+          this.reload.newError('Erro ao tentar obter informações. Tentando novamente...', () => {
+            this.get_about();
+          });
         });
   }
 
@@ -38,8 +42,9 @@ export class HomeComponent implements OnInit {
           this.paragrafos = data;
           this.paragrafos.reverse();
         }, (error) => {
-          console.log('Erro ao tentar obter paragrafos do autor. Tentando novamente...');
-          this.get_paragrafos();
+          this.reload.newError('Erro ao tentar obter paragrafos do autor. Tentando novamente...', () => {
+            this.get_paragrafos();
+          });
         });
   }
 
@@ -49,8 +54,9 @@ export class HomeComponent implements OnInit {
           // console.log(data);
           this.redesSociais = data;
         }, (error) => {
-          console.log('Erro ao tentar obter redes sociais. Tentando novamente...');
-          this.get_redes_sociais();
+          this.reload.newError('Erro ao tentar obter redes sociais. Tentando novamente...', () => {
+            this.get_redes_sociais();
+          });
         });
   }
 

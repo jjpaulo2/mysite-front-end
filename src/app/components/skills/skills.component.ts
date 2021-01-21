@@ -1,3 +1,4 @@
+import { ReloadService } from './../../services/reload/reload.service';
 import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,9 @@ export class SkillsComponent implements OnInit {
 
   skills: any;
 
-  constructor(private api: GetApiDataService) { }
+  constructor(private api: GetApiDataService,
+              private reload: ReloadService
+              ) { }
 
   ngOnInit(): void {
     this.get_skills();
@@ -22,8 +25,9 @@ export class SkillsComponent implements OnInit {
           // console.log(data);
           this.skills = data;
         }, (error) => {
-          console.log('Erro ao tentar obter habilidades. Tentando novamente...');
-          this.get_skills();
+          this.reload.newError('Erro ao tentar obter habilidades. Tentando novamente...', () => {
+            this.get_skills();
+          });
         });
   }
 

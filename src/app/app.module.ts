@@ -13,6 +13,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ErrorReloadingComponent } from './components/error-reloading/error-reloading/error-reloading.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     SkillsComponent,
     ContactComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ErrorReloadingComponent
   ],
   imports: [
     BrowserModule,

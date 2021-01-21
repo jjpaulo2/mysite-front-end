@@ -1,3 +1,4 @@
+import { ReloadService } from './../../services/reload/reload.service';
 import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,9 @@ export class EducationComponent implements OnInit {
 
   education: any;
 
-  constructor(private api: GetApiDataService) { }
+  constructor(private api: GetApiDataService,
+              private reload: ReloadService
+              ) { }
 
   ngOnInit(): void {
     this.get_education();
@@ -23,8 +26,9 @@ export class EducationComponent implements OnInit {
           this.education = data;
           this.education.reverse();
         }, (error) => {
-          console.log('Erro ao tentar obter formações. Tentando novamente...');
-          this.get_education();
+          this.reload.newError('Erro ao tentar obter formações. Tentando novamente...', () => {
+            this.get_education();
+          });
         });
   }
 
