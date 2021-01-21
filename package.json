@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
+    "postinstall": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +22,7 @@
     "@angular/router": "~10.1.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
