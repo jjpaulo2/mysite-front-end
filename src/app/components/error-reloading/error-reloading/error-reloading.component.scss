@@ -1,9 +1,12 @@
 .error-loading {
     max-width: 500px;
     position: absolute;
-    z-index: 50;
     width: 80%;
-
     left: 50%;
+    z-index: -1;
     transform: translateX(-50%);
+    
+}
+.error-loading.show {
+    z-index: 50 !important;
 }

@@ -11,7 +11,7 @@
         <div *ngFor="let work of portfolio; let i = index;">
 
           <div class="carousel-item slideItem active" *ngIf="i===0">
-            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded" alt="...">
+            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded">
             <div class="carousel-caption d-none d-md-block">
               <h5>{{ work.titulo }}</h5>
               <p>{{ work.descricao }}</p>
@@ -19,7 +19,7 @@
           </div>
 
           <div class="carousel-item slideItem" *ngIf="i>0">
-            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded" alt="...">
+            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded">
             <div class="carousel-caption d-none d-md-block">
               <h5>{{ work.titulo }}</h5>
               <p>{{ work.descricao }}</p>
