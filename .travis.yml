@@ -1,0 +1,20 @@
+language: node_js
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "node_modules"
+install:
+- npm install
+script:
+- npm postinstall
+deploy:
+  provider: heroku
+  api_key:
+    secure: rr+JWIxyEmwzhC8MuZCISX5/kmjm1CXuTbMhtiW9TJwVnjbQh3YAPcoJGg+8mD5KROPZ1ABTKhTqcemId5ptbgL1QExKKB6dJZbu9UUC5UwPYKXgInmAt7nWEimEqnzRGm6eyIxWbCDR895vNfWcHA9ybckB+dWruTcgnSsFo08n0ZqOfogMOldh1RluOlhTI0YgdhCSA5rqvqL22g42hDITYQ1WC77aaNv0/i6tNoQa1E2wsm6K7R1HBidJah7dbv1SpuhRYlxCjkgS9hgVk/At7w/XYJEj3VBtf/yNLQxUT0445Z82yiMXW1tTYA8jHbtVTMiVJIx5j7z200sBKDZw8In+3epD30WPsmjyG75Vx48u5FEDEVMqK1WVdNpX7uo4SKyTx5+nDaU7tCBm4Go8LfAetM5clvxBlcUHfFm36EAVpWQyyp7KUy+csHpL4WPM30p6kF7FJemlQis968B8OXnuz+A2A+0Ht3Pv5R4oDCIvtlTqsLvqx49KlqWB9z+ZOmFS7zkT2wF6IrbUQh1cdEpgchViUMB8fUB4RpHTn0rcnkYXMNcg0TtcQe7A+4s25bhOWPh3NubmaFwJ7faKZhcjJce2gWB6BDoTkW8RfKErY0kXQMAX6bcBgKhdeoeP9kllpEwB4BZIsOwFkSgBeEBnidFanqXAYYUXzx4=
+  app: jjpaulo2
+  edge: true
+  run:
+  - npm install
+  - npm postinstall
+  - npm start
