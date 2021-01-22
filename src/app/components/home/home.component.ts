@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
         .subscribe((data) => {
           // console.log(data);
           this.paragrafos = data;
-          this.paragrafos.reverse();
         }, (error) => {
           this.reload.newError('Erro ao tentar obter paragrafos do autor. Tentando novamente...', () => {
             this.get_paragrafos();
