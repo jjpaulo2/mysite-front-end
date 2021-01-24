@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+const COMPLETE_PAGES = [
+  '/curriculum'
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +11,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mysite-front-end';
+
+  pathname = window.location.pathname;
+  isCompletePage = COMPLETE_PAGES.includes(this.pathname);
 }

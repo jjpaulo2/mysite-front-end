@@ -1,5 +1,5 @@
-import { ReloadService } from './../../services/reload/reload.service';
-import { GetApiDataService, ENDPOINTS } from './../../services/get-api-data/get-api-data.service';
+import { ReloadService } from '../../../../services/reload/reload.service';
+import { GetApiDataService, ENDPOINTS } from '../../../../services/get-api-data/get-api-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

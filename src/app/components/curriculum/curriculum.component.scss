@@ -1,0 +1,63 @@
+.page {
+    width: 100% !important;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+    padding: 50px 20px 20px 20px;
+}
+
+.profile-photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+    border: solid 8px rgba(255,255,255,.2);
+    background-color: rgba(255, 255, 255, .1);
+    z-index: 10;
+}
+.profile-photo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-loading {
+    position: absolute;
+    left: calc(50% - 15px);
+}
+
+
+.paragraph-home {
+    margin: 0 auto 10px auto;
+    text-align: left;
+}
+
+.card-education-experience {
+    width: 100%;
+    margin: 0 10px 10px 0;
+}
+
+.text-white-90 {
+    color:rgba(255, 255, 255, .9) !important;
+}
+
+.icon-about {
+    display: inline-block;
+    width: 25px;
+    text-align: right;
+    font-size: 17pt;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#skills {
+    ul {
+        padding-left: 20px;
+    }
+}
+
+#message-generation {
+    text-align: center;
+    margin: 10px auto 0 auto;
+}

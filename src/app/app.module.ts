@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { HomeComponent } from './components/home/home.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { JobExperienceComponent } from './components/job-experience/job-experience.component';
-import { EducationComponent } from './components/education/education.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ErrorReloadingComponent } from './components/error-reloading/error-reloading/error-reloading.component';
+import { HomeComponent } from './components/home-page/pages/home/home.component';
+import { TopBarComponent } from './components/home-page/top-bar/top-bar.component';
+import { JobExperienceComponent } from './components/home-page/pages/job-experience/job-experience.component';
+import { EducationComponent } from './components/home-page/pages/education/education.component';
+import { SkillsComponent } from './components/home-page/pages/skills/skills.component';
+import { ContactComponent } from './components/home-page/pages/contact/contact.component';
+import { FooterComponent } from './components/home-page/footer/footer.component';
+import { PortfolioComponent } from './components/home-page/pages/portfolio/portfolio.component';
+import { ErrorReloadingComponent } from './components/home-page/error-reloading/error-reloading/error-reloading.component';
+import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ErrorReloadingComponent } from './components/error-reloading/error-relo
     ContactComponent,
     FooterComponent,
     PortfolioComponent,
-    ErrorReloadingComponent
+    ErrorReloadingComponent,
+    CurriculumComponent
   ],
   imports: [
     BrowserModule,

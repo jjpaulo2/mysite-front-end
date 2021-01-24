@@ -1,0 +1,109 @@
+<div class="page text-white row">
+
+    <aside class="col-4">
+        
+        <div class="profile-photo-div">
+            <img src="{{ sobre.foto }}" class="profile-photo" alt="">
+            <div class="spinner-border photo-loading" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <br>
+        <div id="contact">
+            <h5 class="text-left">Contato</h5>
+            <hr class="bg-white mt-0">
+            
+            <span class="text-white-90">
+                <div class="icon-about">
+                    <i class="far fa-envelope"></i>
+                </div>
+                {{ sobre.email }}
+            </span><br>
+            <span class="text-white-90">
+                <div class="icon-about">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                {{ sobre.telefone }}
+            </span><br>
+
+            <div *ngIf="!sobre">
+                <div class="spinner-border loading" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div id="skills">
+            <h5 class="text-left">Habilidades</h5>
+            <hr class="bg-white mt-0">
+
+            <ul class="">
+                <li class="text-white-90" *ngFor="let item of skills; let i = index;">
+                    {{ item.titulo }}
+                </li>
+              </ul>
+
+            <div *ngIf="!skills">
+                <div class="spinner-border loading" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    
+    
+    <section class="col">
+        <h3>{{ sobre.nome + ' ' + sobre.sobrenome }}</h3>
+
+        <p *ngFor="let paragrafo of paragrafos" class='paragraph-home text-white-90'>{{ paragrafo.paragrafo }}</p>
+
+        <div id="education">
+            <h5 class="text-right">Educação</h5>
+            <hr class="bg-white mt-0">
+
+            <div class="card-education-experience" *ngFor="let item of education; let i = index;">
+                <span>
+                    <strong>{{ item.titulo }}</strong>
+                    ({{ item.inicio + ' - ' + item.fim }})
+                </span><br>
+                <span class="text-white-90">{{ item.instituicao }}</span>
+            </div>
+
+            <div *ngIf="!education">
+                <div class="spinner-border loading" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience">
+            <h5 class="text-right">Experiência profissional</h5>
+            <hr class="bg-white mt-0">
+
+            <div class="card-education-experience" *ngFor="let item of experience; let i = index;">
+                <span>
+                    <strong>{{ item.cargo }}</strong>
+                    ({{ item.inicio + ' - ' + item.fim }})
+                </span><br>
+                <span class="d-block mb-2">{{ item.empresa }}</span>
+                <p class="text-white-90">{{ item.descricao }}</p>
+            </div>
+            
+            <div *ngIf="!experience">
+                <div class="spinner-border loading" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+    <div id="message-generation">
+        <div class="alert alert-light text-dark" role="alert">
+            Currículo gerado automaticamente no site <a href="https://jjpaulo2.github.io">https://jjpaulo2.github.io</a> em {{ get_date() }} às {{ get_time() }}. 
+        </div>
+    </div>
+</div>

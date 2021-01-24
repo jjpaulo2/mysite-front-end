@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routes } from '../../app-routing.module';
+import { routes } from '../../../app-routing.module';
 
 @Component({
   selector: 'app-top-bar',

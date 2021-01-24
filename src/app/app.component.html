@@ -1,7 +1,14 @@
-<app-top-bar></app-top-bar>
+<div *ngIf='!isCompletePage'>
 
-<app-error-reloading></app-error-reloading>
+    <app-top-bar></app-top-bar>
+    <app-error-reloading></app-error-reloading>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
 
-<router-outlet></router-outlet>
+</div>
+<div *ngIf='isCompletePage'>
 
-<app-footer></app-footer>
+    <app-error-reloading></app-error-reloading>
+    <router-outlet></router-outlet>
+
+</div>
