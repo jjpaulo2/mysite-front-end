@@ -6,6 +6,20 @@
     .carousel-inner {
         height: 500px;
     }
+
+    .slide-button-icon {
+        background-color: rgba(0,0,0,.5);
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 50%;
+        
+        .carousel-control-next-icon, .carousel-control-prev-icon {
+            vertical-align: middle;
+            text-align: center;
+            margin: auto;
+        }
+    }
     
     .carousel-item {
     

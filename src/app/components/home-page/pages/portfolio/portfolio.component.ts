@@ -22,7 +22,7 @@ export class PortfolioComponent implements OnInit {
   get_portfolio(): any {
     this.api.get_data_public(ENDPOINTS.Portfolio)
         .subscribe((data) => {
-          // console.log(data);
+          console.log(data);
           this.portfolio = data;
           this.portfolio.reverse();
         }, (error) => {

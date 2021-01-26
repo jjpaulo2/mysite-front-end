@@ -2,39 +2,31 @@
 
   <div *ngIf="portfolio">
     
-    <div id="carouselExampleCaptions" class="carousel slide border border-dark" data-ride="carousel">
+    <div id="portfolio-slide" class="carousel slide border border-dark" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li *ngFor="let work of portfolio; let i = index;" data-target="#carouselExampleCaptions" data-slide-to="{{ i }}" ></li>
+        <li *ngFor="let work of portfolio; let i = index" data-target="#portfolio-slide" attr.data-slide-to="{{ i }}" ngClass="{{ i===0 ? 'active' : '' }}"></li>
       </ol>
       <div class="carousel-inner rounded">
 
-        <div *ngFor="let work of portfolio; let i = index;">
-
-          <div class="carousel-item slideItem active" *ngIf="i===0">
-            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>{{ work.titulo }}</h5>
-              <p>{{ work.descricao }}</p>
-            </div>
+        <div *ngFor="let work of portfolio; let i = index" class="carousel-item slideItem" ngClass="{{ i===0 ? 'active' : '' }}">
+          <img src="{{ work.gif }}" class="d-block w-100 rounded">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ work.titulo }}</h5>
+            <p>{{ work.descricao }}</p>
           </div>
-
-          <div class="carousel-item slideItem" *ngIf="i>0">
-            <img src="{{ work.gif }}" loop="infinite" class="d-block w-100 rounded">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>{{ work.titulo }}</h5>
-              <p>{{ work.descricao }}</p>
-            </div>
-          </div>
-
         </div>
         
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <a class="carousel-control-prev" href="#portfolio-slide" role="button" data-slide="prev">
+        <span class="slide-button-icon">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <a class="carousel-control-next" href="#portfolio-slide" role="button" data-slide="next">
+        <span class="slide-button-icon">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </span>
         <span class="sr-only">Next</span>
       </a>
     </div>
